@@ -32,6 +32,6 @@ require('prettier').setup({
   single_quote = false,
   tab_width = 2,
   trailing_comma = "es5",
-  use_tabs = true,
+  use_tabs = false,
   vue_indent_script_and_style = false,
 })

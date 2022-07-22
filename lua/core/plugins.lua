@@ -84,5 +84,7 @@ return require("packer").startup(
         }
         use "tpope/vim-commentary"
         use "preservim/tagbar"
+        use "tpope/vim-dadbod"
+        use "kristijanhusak/vim-dadbod-ui"
     end
 )
