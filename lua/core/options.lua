@@ -1,4 +1,5 @@
 vim.opt.compatible = false
+vim.opt.cursorline = true
 vim.opt.showmatch = true
 vim.opt.ignorecase = true
 vim.opt.mouse = 'v'
@@ -11,6 +12,7 @@ vim.opt.shiftwidth = 2
 vim.opt.smarttab = true
 vim.opt.autoindent = true
 vim.opt.number = true
+vim.opt.relativenumber = true
 vim.opt.wildmode = "longest,list,full"
 vim.opt.cc = "80"       
 vim.opt.mouse = "a"    

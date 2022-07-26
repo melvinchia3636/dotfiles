@@ -28,8 +28,8 @@ return require("packer").startup(
             end,
         }
         use {"akinsho/bufferline.nvim", config = function()
-                require("bufferline").setup()
-            end,
+            require("bufferline").setup()
+        end,
         }
         use "pangloss/vim-javascript"
         use "leafgarland/typescript-vim"
@@ -51,40 +51,68 @@ return require("packer").startup(
         use "neovim/nvim-lspconfig"
         use "github/copilot.vim"
         use {"jose-elias-alvarez/null-ls.nvim", config = function ()
-                require("plugins.null-ls")
-            end,
+            require("plugins.null-ls")
+        end,
         }
         use {"MunifTanjim/prettier.nvim", config = function()
-                require("plugins.prettier")
-            end,
+            require("plugins.prettier")
+        end,
         }
         use "nvim-lua/plenary.nvim"
         use {"nvim-telescope/telescope.nvim", tag = "0.1.0", config = function()
-                require("plugins.telescope")
-            end,
+            require("plugins.telescope")
+        end,
         }
         use "vifm/vifm.vim"
         use {"kyazdani42/nvim-web-devicons", config = function()
-                require("plugins.web-devicons")
-            end,
+            require("plugins.web-devicons")
+        end,
         }
         use {"nvim-treesitter/nvim-treesitter", config = function()
-                require("plugins.treesitter")
-            end,
+            require("plugins.treesitter")
+        end,
         }
         use "andweeb/presence.nvim"
         use "tiagofumo/vim-nerdtree-syntax-highlight"
         use {'navarasu/onedark.nvim', config = function()
-                require('onedark').setup {
-                    style = 'darker',
-                    transparent = true,
-                }
-                require('onedark').load()
-            end
+            require('onedark').setup {
+                style = 'deep',
+                transparent = true,
+                term_colors = false
+            }
+            require('onedark').load()
+        end
         }
         use "tpope/vim-commentary"
         use "preservim/tagbar"
         use "tpope/vim-dadbod"
         use "kristijanhusak/vim-dadbod-ui"
+        use "KabbAmine/vCoolor.vim"
+        use "AndrewRadev/tagalong.vim"
+        use ({"ziontee113/color-picker.nvim", config = function()
+            require("color-picker")
+        end,
+        })
+        use {
+            "AckslD/nvim-neoclip.lua",
+            requires = {
+                {'kkharji/sqlite.lua', module = 'sqlite'},
+            -- you'll need at least one of these
+            -- {'nvim-telescope/telescope.nvim'},
+            -- {'ibhagwan/fzf-lua'},
+            },
+            config = function()
+                require('neoclip').setup()
+            end,
+        }
+        use {
+            'weilbith/nvim-code-action-menu',
+            after = 'coc.nvim',
+            requires = 'xiyaowong/coc-code-action-menu.nvim',
+            config = function()
+                require 'coc-code-action-menu'
+            end,
+        }
+        use "tpope/vim-surround"
     end
 )

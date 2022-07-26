@@ -1,5 +1,8 @@
 {
   "eslint.autoFixOnSave": true,
+  "diagnostic.errorSign": "",
+  "diagnostic.warningSign": "",
+  "diagnostic.infoSign": "",
   "suggest.completionItemKindLabels": {
     "method": "  ",
     "function": "  ",
@@ -26,5 +29,6 @@
     "constructor": "  ",
     "value": "  ",
     "enumMember": "  "
-  }
+  },
+  "suggest.noselect": false
 }
