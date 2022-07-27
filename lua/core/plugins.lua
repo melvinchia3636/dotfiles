@@ -74,25 +74,16 @@ return require("packer").startup(
         }
         use "andweeb/presence.nvim"
         use "tiagofumo/vim-nerdtree-syntax-highlight"
-        use {'navarasu/onedark.nvim', config = function()
-            require('onedark').setup {
-                style = 'deep',
-                transparent = true,
-                term_colors = false
-            }
-            require('onedark').load()
-        end
-        }
         use "tpope/vim-commentary"
         use "preservim/tagbar"
         use "tpope/vim-dadbod"
         use "kristijanhusak/vim-dadbod-ui"
         use "KabbAmine/vCoolor.vim"
         use "AndrewRadev/tagalong.vim"
-        use ({"ziontee113/color-picker.nvim", config = function()
-            require("color-picker")
+        use {"ziontee113/color-picker.nvim", config = function()
+            require("color-picker").setup()
         end,
-        })
+        }
         use {
             "AckslD/nvim-neoclip.lua",
             requires = {
@@ -114,5 +105,13 @@ return require("packer").startup(
             end,
         }
         use "tpope/vim-surround"
+        use { 'mhartington/oceanic-next', config = function()
+          vim.cmd [[colorscheme OceanicNext]]
+          vim.cmd [[hi Normal guibg=NONE ctermbg=NONE]]
+          vim.cmd [[hi LineNr guibg=NONE ctermbg=NONE]]
+          vim.cmd [[hi SignColumn guibg=NONE ctermbg=NONE]]
+          vim.cmd [[hi EndOfBuffer guibg=NONE ctermbg=NONE]]
+        end,
+        }
     end
 )
